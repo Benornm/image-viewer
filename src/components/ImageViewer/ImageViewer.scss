@@ -1,0 +1,44 @@
+@import "../../styles/mixins";
+
+.gallery-container {
+  padding-bottom: 50px;
+
+  .gallery-title {
+    margin: 30px 0;
+    padding: 0;
+    text-align: center;
+    color: #656565;
+    text-transform: uppercase;
+    font-size: 5.5vw;
+    font-weight: 400;
+
+  }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 8px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+
+    @include mQ( 20em ) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    @include mQ( 34em ) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include mQ( 60em ) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .empty-grid {
+    text-align: center;
+    font-size: 40px;
+  }
+}
+
+
+
+
